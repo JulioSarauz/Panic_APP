@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       Bienvenido
+      <ion-input [(ngModel)]="user">{{USER}}</ion-input>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card  *ngFor="let c of contenido">
+      <ion-card-header>
+       Alerta de {{c.name}}:
+      </ion-card-header>
+      <ion-card-subtitle>
+        {{c.fecha}}
+      </ion-card-subtitle>
+      <ion-card-content class="letra">
+        {{c.msm}}
+      </ion-card-content>
+  </ion-card>
+
+
+  <ion-fab vertical="bottom" horizontal="end"  edge slot="fixed" >
+    <ion-fab-button>
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="Salir()"><ion-icon name="exit-outline"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar >
+    <ion-input placeholder="alerta algo..." [(ngModel)]="msm"></ion-input>
+    <ion-button class="alert" expand="block" icon-right (click)="sendAlertas()">
+      ENVIAR!
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

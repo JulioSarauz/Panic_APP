@@ -1,0 +1,7 @@
+{
+  "name": "btn_aux2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      BIENVENIDO
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list class="sesion1">
+      <ion-item>
+        <ion-input placeholder="Ingrese Usuario" [(ngModel)]="user"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Ingrese Contraseña" [(ngModel)]="pass"></ion-input>
+      </ion-item>
+      
+      <ion-button expand="block" fill="outline" class="btn_inicio" (click)="Login()">Iniciar Sesion</ion-button>
+      <ion-button expand="block" fill="outline" class="btn_reg" routerLink="/registro">Registrarse</ion-button>
+  </ion-list>
+      
+</ion-content>
